@@ -1,7 +1,7 @@
 import db from "../config/db.js";
 
 const comprasSchema = new db.Schema({
-    name: {
+    product_name: {
         type: String,
         required: true
     },
@@ -13,6 +13,10 @@ const comprasSchema = new db.Schema({
         type: Number,
         required: true,
     },
+    expiration_date: {
+        type: Date,
+        required: true,
+    }
 });
 
 const Compras = db.model("Compras", comprasSchema);
